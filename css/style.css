@@ -1,0 +1,77 @@
+
+body, div, h2, p, span {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  h1{
+    color: purple;
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .personagem {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 40px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  
+
+  .personagem img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+ 
+  .personagem h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: purple;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .personagem p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+
+  .personagem span {
+    font-size: 16px;
+    color: purple;
+    font-weight: bold;
+  }
+  
+@media screen and (max-width: 768px) {
+    .personagem {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .personagem {
+        width: calc(70% - 10px); 
+        
+    }
+
+    .personagem h2{
+        font-size: 15px;
+    }
+}
