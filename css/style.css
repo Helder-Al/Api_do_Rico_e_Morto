@@ -1,77 +1,155 @@
-
+@charset "UTF-8";
 body, div, h2, p, span {
-    margin: 0;
-    padding: 0;
-  }
-  
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  
-  h1{
-    color: purple;
-    text-align: center;
-    font-size: 150%;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .personagem {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 40px;
-    margin: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    display: inline-block;
-    width: calc(33.33% - 20px); 
-    box-sizing: border-box;
-    vertical-align: top;
-  }
-  
-
-  .personagem img {
-    max-width: 100%;
-    height: auto;
-    
-  }
-  
- 
-  .personagem h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    color: purple;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .personagem p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-
-  .personagem span {
-    font-size: 16px;
-    color: purple;
-    font-weight: bold;
-  }
-  
-@media screen and (max-width: 768px) {
-    .personagem {
-        width: calc(50% - 20px); 
-    }
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-@media screen and (max-width: 350px) {
-    .personagem {
-        width: calc(70% - 10px); 
-        
-    }
-
-    .personagem h2{
-        font-size: 15px;
-    }
+body {
+  background-color: #f4f4f4;
 }
+
+h1 {
+  color: purple;
+  text-align: center;
+  font-size: 250%;
+  font-family: "Poppins", sans-serif;
+}
+
+/*---------------------------------- search sei la*/
+#wandinha-sp {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  height: 30px;
+  font-size: 110%;
+  color: aqua;
+  border: none;
+}
+form input:focus {
+  outline: none;
+}
+form select {
+  height: 30px;
+  font-size: 110%;
+  color: aqua;
+  border: none;
+}
+form select:focus {
+  outline: none;
+}
+form button {
+  position: fixed;
+  padding: 15px;
+  font-size: 110%;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: top 7s linear, left 7s linear; /* Adicione uma transição suave */
+  animation: moveElement 7s linear infinite;
+}
+form button:hover {
+  cursor: pointer;
+}
+
+@keyframes moveElement {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 50px); /* Mova para a direita */
+  }
+  50% {
+    top: calc(100% - 50px); /* Mova para baixo */
+    left: calc(100% - 50px); /* Mova para a direita e para baixo */
+  }
+  75% {
+    top: calc(100% - 50px); /* Continue indo para baixo */
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0; /* Volte à posição inicial */
+  }
+}
+label, button {
+  margin-left: 1%;
+  margin-right: 4px;
+}
+
+label {
+  font-size: 120%;
+  font-weight: 500;
+  color: yellow;
+}
+
+/*---------------------------------- search sei la*/
+#personagem {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.personagem {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 40px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  vertical-align: top;
+  transition: 2s ease;
+}
+.personagem:hover {
+  padding: 35px;
+  background-color: #f4f4f4;
+  z-index: 1;
+}
+.personagem:hover img {
+  transition: 1s ease;
+  transform: scaleX(12);
+  opacity: 1;
+}
+
+.personagem img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.personagem h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: purple;
+  font-family: "Poppins", sans-serif;
+}
+
+.personagem p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.personagem span {
+  font-size: 16px;
+  color: purple;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

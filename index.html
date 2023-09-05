@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API produtos</title>
-    <script src="js/apiRickMorty.js" ></script>
+    <title>API Rico e Morto</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Casa dos Controles</h1>
+    <img id="wandinha-sp" src="img/wandinha-igor-vinicius.jpg" alt="">
+    <h1>OK GOOGLE procurar mãe do mori sem roupa pelada desnupida despovida de vestimenta RiqueMori</h1>
+    <form id="search-form">
+        <label for="search-input">Buscar por nome:</label>
+        <input type="text" id="search-input" placeholder="Digite o nome do personagem">
+        
+        <label for="status-input">Status:</label>
+        <select id="status-input">
+          <option value="">Todos</option>
+          <option value="alive">Vivo</option>
+          <option value="dead">Morto</option>
+        </select>
+        
+        <label for="species-input">Espécie:</label>
+        <select id="species-input">
+          <option value="">Todas</option>
+          <option value="Human">Humano</option>
+          <option value="Alien">Alien</option>
+          <!-- Adicione mais opções de espécies conforme necessário -->
+        </select>
+      
+        <button type="submit">Buscar</button>
+      </form>
     <div id="personagem">
     </div>
+     
+    <script src="js/apiRickMorty.js" ></script>
 </body>
 </html>
